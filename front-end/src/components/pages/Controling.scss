@@ -1,0 +1,122 @@
+.page-header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.rounded-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table caption {
+  caption-side: top;
+  .table-caption-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    .table-header {
+      margin: 0;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      .remove-selected-button {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: system-ui, sans-serif;
+      }
+    }
+  }
+}
+
+.rounded-table th,
+.rounded-table td {
+  padding: 15px;
+  border: none;
+  vertical-align: middle;
+}
+
+.rounded-table tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.rounded-table tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.rounded-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.rounded-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.table-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown:not(.show-options) .dropdown-content {
+  display: none;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 40px;
+  border-radius: 0.5em;
+  z-index: 1;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  min-width: 165px;
+  box-shadow: 0px 4px 15px -8px #888888;
+  cursor: pointer;
+}
+
+.dropdown-content span {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.status-pill {
+  display: block;
+  padding: 4px 16px;
+  border-radius: 1em;
+}
+
+.status-New {
+  background-color: #cfffd3;
+  color: #00700b;
+}
+
+.status-Onhold {
+  background-color: #fff2cf;
+  color: #8a6500;
+}
+
+.status-Canceled {
+  background-color: #ffcfcf;
+  color: #990000;
+}
+
+.status-Pending {
+  background-color: #cfecff;
+  color: #00548c;
+}
