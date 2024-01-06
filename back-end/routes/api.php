@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('leads', 'LeadsController');
+
+Route::get('/properties', [PropertyController::class, 'index']);
+Route::get('/properties/{id}', [PropertyController::class, 'show']);
+
+Route::get('/companies', [CompanyController::class, 'index']);
+Route::get('/companies/{id}', [CompanyController::class, 'show']);
