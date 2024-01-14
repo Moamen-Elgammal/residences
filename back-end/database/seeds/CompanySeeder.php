@@ -17,5 +17,11 @@ class CompanySeeder extends Seeder
             'description' => 'A leading real estate company.',
             'logo_url' => 'abc_logo.jpg',
         ]);
+
+        Company::create([
+            'name' => 'XYZ Tech Solutions',
+            'description' => 'Innovative technology solutions provider.',
+            'logo_url' => 'xyz_logo.jpg',
+        ]);
     }
 }

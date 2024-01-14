@@ -47,5 +47,23 @@ class PropertySeeder extends Seeder
                 'https://images.unsplash.com/photo-1582968499828-e17a19b7f1bb',
             ],
         ]);
+
+        Property::create([
+            'title' => 'Luxury Apartment',
+            'description' => 'A luxurious apartment with modern amenities.',
+            'type' => 'apartment',
+            'price' => 800000,
+            'location' => '123 Main Street',
+            'bedrooms' => 2,
+            'bathrooms' => 2.5,
+            'area' => 1500,
+            'status' => 'for_sale',
+            'company_id' => 2,
+            'image_urls'  => [
+                'https://images.unsplash.com/photo-1560807707-8cc77767d783',
+                'https://images.unsplash.com/photo-1570202854084-60a1c2c1d626',
+                'https://images.unsplash.com/photo-1559959367-7d174f5e0711',
+            ],
+        ]);
     }
 }
