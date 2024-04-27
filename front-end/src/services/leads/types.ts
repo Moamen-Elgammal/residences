@@ -1,4 +1,4 @@
-export interface User {
+export interface Lead {
   id: string;
   name: string;
   mobile_number: string;

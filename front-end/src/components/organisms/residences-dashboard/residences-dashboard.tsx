@@ -13,8 +13,8 @@ import {
 } from '@nextui-org/react';
 import { ResidencesData, ResidentialUnit } from '@/types/residences-types';
 import { useAppContext } from '@/context/app-context';
-import ApiService from '@/services/ApiService';
 import DownloadBrochureModal from '@/components/molecules/download-prochure-modal';
+import { useCreateLead } from '@/services/leads/hooks';
 
 interface Props {
   residencesData: ResidencesData[];
@@ -24,11 +24,12 @@ export default function ResidencesDashboard({ residencesData }: Props) {
   const { name, mobileNumber, email } = useAppContext();
   const [showDownloadBrochureModal, setShowDownloadBrochureModal] =
     useState(false);
+  const { createLead } = useCreateLead();
 
   const handleConfirm = async () => {
     // TODO: Handle admin login
 
-    await ApiService.createLead({
+    await createLead({
       name: name,
       mobile_number: mobileNumber,
       email: email,

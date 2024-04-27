@@ -3,7 +3,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import { AppContextType, AppProviderProps } from '@/types/app-context-types';
 
-// Define the interface for your context values
 interface AppContextValues {
   name: string;
   mobileNumber: string;
@@ -26,7 +25,6 @@ export const useAppContext = () => {
 };
 
 export const AppProvider = ({ children }: AppProviderProps) => {
-  // Set initial state for context values
   const [name, setName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
   const [email, setEmail] = useState('');

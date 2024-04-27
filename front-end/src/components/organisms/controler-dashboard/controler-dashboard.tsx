@@ -19,13 +19,13 @@ import {
 } from '@nextui-org/react';
 import dayjs from 'dayjs';
 import { DeleteIcon } from '@/app/assets/icons/DeleteIcon';
-import { User } from '@/types/user-types';
+import { Lead } from '@/services/leads/types';
 
 interface ControllerDashboardProps {
-  usersList: User[];
+  usersList: Lead[];
   isLoading: boolean;
-  handleUpdateStatus: (user: User, newStatus: string) => void;
-  handleDeleteUser: (user: User) => void;
+  handleUpdateStatus: (user: Lead, newStatus: string) => void;
+  handleDeleteUser: (user: Lead) => void;
   statusColorMap: Record<string, ChipProps['color']>;
   statuses: string[];
 }
@@ -53,7 +53,7 @@ const ControllerDashboard: React.FC<ControllerDashboardProps> = ({
 
       <TableBody
         emptyContent={
-          usersList.length <= 0 || isLoading ? (
+          usersList.length === 0 && !isLoading ? (
             'No data to display'
           ) : (
             <Spinner color='primary' />
